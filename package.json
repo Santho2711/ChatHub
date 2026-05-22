@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon Backend/index.js\" \"npm start --prefix Frontend\"",
     "start:backend": "nodemon Backend/index.js",
     "start:frontend": "npm start --prefix Frontend",
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [
     "chathub"
