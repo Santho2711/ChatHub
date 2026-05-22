@@ -1,0 +1,156 @@
+.message-wrapper {
+  display: flex;
+  animation: slideInUp 0.3s ease-out;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.own {
+    justify-content: flex-end;
+  }
+
+  &.other {
+    justify-content: flex-start;
+  }
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 55%;
+  word-wrap: break-word;
+}
+
+.message-sender {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  padding: 0 12px;
+}
+
+.message-content {
+  padding: 8px 12px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--message-other-background);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  animation: messageSlide 0.3s ease-out;
+}
+
+.own-message .message-content {
+  background: var(--message-own-background);
+  border-bottom-right-radius: 4px;
+}
+
+.other-message .message-content {
+  background: var(--message-other-background);
+  border-bottom-left-radius: 4px;
+}
+
+.message-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-color);
+  word-break: break-word;
+}
+
+.own-message .message-text {
+  color: #111;
+}
+
+.other-message .message-text {
+  color: var(--text-color);
+}
+
+.message-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+  padding: 0;
+  margin-top: 2px;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.own-message .message-time {
+  color: #666;
+}
+
+.message-status {
+  font-size: 12px;
+  color: #999;
+  font-weight: 600;
+
+  &.read {
+    color: var(--primary-color);
+  }
+}
+
+/* Message Hover Effects */
+.message-wrapper:hover .message-content {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes messageSlide {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* System Messages */
+.message.system {
+  align-self: center;
+}
+
+.message.system .message-content {
+  background: transparent;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .message {
+    max-width: 70%;
+  }
+
+  .message-text {
+    font-size: 13px;
+  }
+
+  .message-time {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .message {
+    max-width: 85%;
+  }
+
+  .message-content {
+    padding: 8px 10px;
+  }
+
+  .message-text {
+    font-size: 13px;
+  }
+}

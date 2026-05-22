@@ -1,0 +1,27 @@
+.contacts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #999;
+  text-align: center;
+}
+
+.contacts-empty svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.contacts-empty p {
+  font-size: 14px;
+  margin: 0;
+}
