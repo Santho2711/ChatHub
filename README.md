@@ -43,16 +43,3 @@ Building ChatHub provided several technical breakthroughs and deep-dives into mo
 3.  **Prompt Engineering for UI**: Discovering how to effectively guide AI code generation tools to produce accessible, responsive, and predictable UI code blocks without manual boilerplate writing.
 
 ---
-
-## 🏃‍♂️ Getting Started
-
-### Prerequisites
-* [Node.js](https://nodejs.org/) (v16 or higher recommended)
-* npm or yarn
-
-### Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/Santho2711/ChatHub.git](https://github.com/Santho2711/ChatHub.git)
-   cd ChatHub
